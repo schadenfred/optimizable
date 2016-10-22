@@ -1,0 +1,8 @@
+Description:
+    Adds "Optimizify" line to the model you provide with the second argument
+
+Example:
+    rails generate optimizable MODEL
+
+    This will create:
+        what/will/it/create
