@@ -5,15 +5,23 @@
 <table>
   <thead>
     <tr>
-      <th>Optimizable</th>
+      <th>Optimizable class</th>
+      <th>Optimizable code</th>
+      <th>name</th>
+      <th>content</th>
+
       <th colspan="3"></th>
     </tr>
+
   </thead>
 
   <tbody>
     <% @optimizations.each do |optimization| %>
       <tr>
-        <td><%= optimization.optimizable %></td>
+        <td><%= optimization.optimizable.try(:class) %></td>
+        <td><%= optimization.optimizable.try(:code) %></td>
+        <td><%= optimization.name %></td>
+        <td><%= optimization.content %></td>
         <td><%= link_to 'Show', optimization %></td>
         <td><%= link_to 'Edit', edit_optimization_path(optimization) %></td>
         <td><%= link_to 'Destroy', optimization, method: :delete, data: { confirm: 'Are you sure?' } %></td>

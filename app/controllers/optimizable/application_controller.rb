@@ -1,5 +1,2 @@
-module Optimizable
-  class ApplicationController < ActionController::Base
-    protect_from_forgery with: :exception
-  end
+class Optimizable::ApplicationController < ::ApplicationController
 end
