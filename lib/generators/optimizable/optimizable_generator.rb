@@ -3,8 +3,6 @@ class OptimizableGenerator < Rails::Generators::NamedBase
 
   source_root File.expand_path('../templates', __FILE__)
 
-
-
   def add_engine_route_to_app
     route "mount Optimizable::Engine => \"\/optimizable\""
   end
